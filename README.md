@@ -72,6 +72,85 @@ Original values:
 num1 = 6, num2 = 7
 After multiplication, new value of num1 = 42
 ```
+### code:
+```
+#include <iostream> 
+using namespace std; 
+
+int main() 
+{
+    int* p=new int[7];
+
+    for (int i=0; i<5; i++)
+    {
+        p[i]=10*(i+1);
+    }
+
+    cout<<*p<<"\n"; 
+    cout<<*p+1<<"\n";
+    cout<<*(p+1)<<"\n";
+    cout<<2[p]<<"\n";
+    cout<<p[2]<<"\n";
+    *p++;
+
+    cout<<*p;
+
+    return 0; 
+}
+```
+
+### Output:
+```
+[Running] cd "c:\Users\Sai\Desktop\CDS\" && g++ tempCodeRunnerFile.cpp -o tempCodeRunnerFile && "c:\Users\Sai\Desktop\CDS\"tempCodeRunnerFile
+10
+11
+20
+30
+30
+20
+[Done] exited with code=0 in 0.381 seconds
+```
+### code:
+```
+// Sai Sankar jena
+// 23070123112
+// ENTC B2 
+// experiment 8
+
+#include <bits/stdc++.h> 
+using namespace std;
+void geeks()
+{
+    int var = 5;
+
+    int* ptr; 
+
+    ptr = &var;
+
+    cout<<"Value at ptr = "<<ptr<<"\n";
+    cout<<"Value at var = " <<var<<"\n";
+    cout<<"Value at *ptr = "<<*ptr<<"\n";
+
+}
+
+
+int main()
+{
+    geeks();
+    return 0;
+}
+```
+### Output:
+```
+[Running] cd "c:\Users\Sai\Desktop\CDS\" && g++ tempCodeRunnerFile.cpp -o tempCodeRunnerFile && "c:\Users\Sai\Desktop\CDS\"tempCodeRunnerFile
+Value at ptr = 0x61ff08
+Value at var = 5
+Value at *ptr = 5
+
+[Done] exited with code=0 in 0.845 seconds
+
+```
+
 ## Key Syntax Elements
 
 1. **`int* ptr`**: Declares a pointer `ptr` for holding the address of an integer variable.
